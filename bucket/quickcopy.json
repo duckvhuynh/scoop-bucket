@@ -1,0 +1,32 @@
+{
+    "version": "0.1.2",
+    "description": "Select and copy text in any on-screen image",
+    "homepage": "https://github.com/duckvhuynh/quickcopy",
+    "license": "MIT|Apache-2.0",
+    "notes": "QuickCopy downloads the VieSVTR model (CC BY-NC 4.0) for Vietnamese at its first start; see README.txt.",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/duckvhuynh/quickcopy/releases/download/v0.1.2/QuickCopy-0.1.2-windows-x64.zip",
+            "hash": "c4b30547a06bf144082b653bfcef6655d0a1eabb1729ee4d4b3b31193b20e9d2"
+        }
+    },
+    "extract_dir": "QuickCopy",
+    "bin": "quickcopy.exe",
+    "shortcuts": [
+        [
+            "quickcopy.exe",
+            "QuickCopy"
+        ]
+    ],
+    "checkver": "github",
+    "autoupdate": {
+        "architecture": {
+            "64bit": {
+                "url": "https://github.com/duckvhuynh/quickcopy/releases/download/v$version/QuickCopy-$version-windows-x64.zip"
+            }
+        },
+        "hash": {
+            "url": "$baseurl/SHA256SUMS.txt"
+        }
+    }
+}
